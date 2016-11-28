@@ -5,6 +5,10 @@ class DBServerTest < Sinatra::Base
 
   set :port, 4000
 
+  get '/' do
+    erb :index
+  end
+
   get '/set' do
     unless params[:name].nil?
       @person = Person.create(params[:name])
