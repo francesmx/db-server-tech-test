@@ -4,18 +4,15 @@ require_relative 'lib/Person'
 class DBServerTest < Sinatra::Base
 
   set :port, 4000
-  enable :sessions
 
   get '/set' do
-    # @person = Person.new(params[:name])
     unless params[:name].nil?
-      session[:name] = params[:name]
+      @person = Person.create(params[:name])
     end
-    erb :index
   end
 
   get '/get' do
-    # @person = Person.new(params[:name])
+    @person = Person.instance
     erb :show_name
   end
 
