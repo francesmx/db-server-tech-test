@@ -5,6 +5,25 @@ If you finish, you can work on saving the data to a file.
 
 Store the data in memory, not in a database, but bear in mind that you will later need to add a database to this code.
 
+Instructions
+-----------
+To install, go to the directory of your choice and follow these instructions:
+```
+$ git clone git@github.com:francesmx/db-server-tech-test.git
+$ cd db-server-tech-test
+$ bundle
+```
+If you want to, you can view test coverage:
+```
+$ rspec
+```
+To play with the app using the web interface, start the server:
+```
+$ ruby app.rb
+$ open http://localhost:4000/
+```
+IMPORTANT: Because I'm an idiot, it only works with the key, 'name'
+
 ## My approach
 1. Created a new git repository
 2. Wrote down a potential approach in README.md
